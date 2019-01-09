@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_points: 1
+  no_rebounds: 1
+  no_assists: 1
+  no_blocks: 1
+  no_steals: 1
+  no_tpm: 1
+  no_fta: 1
+  no_ftm: 1
+  no_fga: 1
+  no_fgm: 1
+  no_turnovers: 1
+  player: one
+  game: one
+
+two:
+  no_points: 1
+  no_rebounds: 1
+  no_assists: 1
+  no_blocks: 1
+  no_steals: 1
+  no_tpm: 1
+  no_fta: 1
+  no_ftm: 1
+  no_fga: 1
+  no_fgm: 1
+  no_turnovers: 1
+  player: two
+  game: two

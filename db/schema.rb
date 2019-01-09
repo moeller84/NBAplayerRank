@@ -10,7 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181205200809) do
+ActiveRecord::Schema.define(version: 20181210205024) do
+
+  create_table "games", force: :cascade do |t|
+    t.date "date"
+    t.integer "gameId"
+    t.integer "gameDateCode"
+    t.string "HomeTeam"
+    t.string "VisitorTeam"
+    t.integer "HomeTeamId"
+    t.integer "VisitorTeamId"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "player_games", force: :cascade do |t|
+    t.integer "no_points"
+    t.integer "no_rebounds"
+    t.integer "no_assists"
+    t.integer "no_blocks"
+    t.integer "no_steals"
+    t.integer "no_tpm"
+    t.integer "no_fta"
+    t.integer "no_ftm"
+    t.integer "no_fga"
+    t.integer "no_fgm"
+    t.integer "no_turnovers"
+    t.integer "personId"
+    t.integer "gameId"
+    t.integer "player_id"
+    t.integer "game_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["game_id"], name: "index_player_games_on_game_id"
+    t.index ["player_id"], name: "index_player_games_on_player_id"
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "firstName"
